@@ -4,7 +4,7 @@ class Sight:
         self.city = city
 
     def __str__(self):
-        return f'Туристичне місце: {self.name}, ({self.city})'
+        return f'Tourist place: {self.name}, ({self.city})'
 
 class List:
     def __init__(self, sights=[]):
@@ -31,26 +31,26 @@ class ListIterator:
 
 
 if __name__ == '__main__':
-    s1 = Sight('Дендропарк Софіїівка', 'Умань')
-    s2 = Sight('Шацькі озера', 'Шацьк')
-    s3 = Sight('гора Говерла', 'Карпати')
-    s4 = Sight('Площа Ринок', 'Львів')
+    s1 = Sight('Dendropark Sofiivka', 'Uman')
+    s2 = Sight('Schatski ozera', 'Shatsk')
+    s3 = Sight('Hoverla mountain', 'Carpathians')
+    s4 = Sight('Rynok Square', 'Lviv')
 
     selfDecision = [s1, s2, s3, s4]
     navigator = [s2, s3, s4, s1]
     guide = [s4, s3, s2, s1]
 
-    print("\nНа власний розсуд туриста:")
+    print("\nTourist's decision:")
     list = List(selfDecision)
     for element in list:
         print(element)
 
-    print("\nЗа рекомендаціями навігатора:")
+    print("\nNavigator recommendations:")
     list = List(navigator)
     for element in list:
         print(element)
 
-    print("\nЗа рекомендаціями гіда:")
+    print("\nGuide recommendations:")
     list = List(guide)
     for element in list:
         print(element)
